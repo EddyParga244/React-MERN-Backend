@@ -3,7 +3,7 @@ const { dbConnection } = require("./database/config");
 const cors = require("cors");
 
 // Cargar variables de entorno
-process.loadEnvFile();
+// process.loadEnvFile();
 const port = process.env.PORT;
 
 // Crear el servidor de express
