@@ -27,8 +27,8 @@ router.post(
   "/",
   [
     check("title", "El titulo es obligatorio").not().isEmpty(),
-    check("start", "Fecha de inicio es obligatoria").custom(isDate),
-    check("end", "Fecha de finalización es obligatoria").custom(isDate),
+    check("start", "Fecha de inicio es obligatoria").isISO8601(),
+    check("end", "Fecha de finalización es obligatoria").isISO8601(),
     validarCampos,
   ],
   crearEvento,
